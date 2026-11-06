@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Android build outputs and local config
+android/build/
+android/app/build/
+android/local.properties
+android/app/debug.keystore
+android/app/release.keystore
+*.keystore
+
+# Launcher PNGs are regenerated in CI (see .github/workflows/build-apk.yml)
+assets/icon.png
+android/app/src/main/res/mipmap-*/ic_launcher*.png
+
+# Gradle
+.gradle/
+android/.gradle/
+android/gradle/wrapper/gradle-wrapper.jar
+
+# Secrets — never commit these
+android/app/google-services.json
+*.jks
+
+# Misc
+.DS_Store
