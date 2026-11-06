@@ -65,6 +65,7 @@ jobs:
 
       - name: Regenerate launcher icons
         run: |
+          python3 -m pip install --quiet Pillow
           python3 - <<'PY'
           from PIL import Image, ImageDraw, ImageFont
           import os
