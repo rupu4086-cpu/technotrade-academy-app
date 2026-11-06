@@ -1,0 +1,1 @@
+{"compilerOptions":{"allowJs":true,"esModuleInterop":true,"jsx":"react-native","moduleResolution":"node","noEmit":true,"skipLibCheck":true,"strict":true,"target":"esnext"},"exclude":["node_modules"]}
