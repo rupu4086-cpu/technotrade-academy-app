@@ -72,9 +72,12 @@ jobs:
           def make_icon(size):
               img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
               d = ImageDraw.Draw(img)
+              # Charcoal rounded square on a transparent background.
               d.rounded_rectangle([0, 0, size - 1, size - 1], radius=int(size * 0.18), fill=(30, 27, 22, 255))
+              # Amber candlesticks (Market Amber design).
               w = size / 512.0
               candles = [
+                  # (x centre, body top, body bottom, wick top, wick bottom, colour)
                   (0.28, 0.34, 0.58, 0.24, 0.68, (232, 160, 32, 255)),
                   (0.50, 0.24, 0.48, 0.16, 0.58, (232, 160, 32, 255)),
                   (0.72, 0.44, 0.62, 0.34, 0.74, (232, 160, 32, 255)),
@@ -84,6 +87,7 @@ jobs:
                   bw = max(2, int(0.09 * size))
                   d.line([(x, int(wt * size)), (x, int(wb * size))], fill=col, width=max(1, int(0.015 * size)))
                   d.rectangle([x - bw // 2, int(bt * size), x + bw // 2, int(bb * size)], fill=col)
+              # Wordmark.
               try:
                   font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", int(size * 0.085))
               except Exception:
