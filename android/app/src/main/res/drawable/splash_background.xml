@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Splash screen: charcoal background, fresh amber/charcoal app icon centred. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="#26221C" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#26221C" />
+        </shape>
+    </item>
     <item
         android:width="160dp"
         android:height="160dp"
